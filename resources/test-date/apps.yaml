@@ -9,10 +9,11 @@ spec:
   project: cf-git-sources
   sources:
   - repoURL: https://github.com/Alina-onprem/promotion-flow-apps-examples.git
-    path: '.'
+    path: .
     targetRevision: test-210
     directory:
       include: '*'
+      exclude: ''
       recurse: true
   destination:
     namespace: test-date
