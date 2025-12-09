@@ -9,7 +9,7 @@ spec:
   project: cf-git-sources
   sources:
   - repoURL: https://github.com/Alina-onprem/repo-6.git
-    path: ''
+    path: .
     targetRevision: main
     directory:
       include: '*'
