@@ -12,8 +12,8 @@ spec:
     path: ''
     targetRevision: test-210
     directory:
-      include: '*'
-      exclude: '*promotion-template-example.yaml'
+      include: ''
+      exclude: ''
       recurse: true
   destination:
     namespace: test-date
