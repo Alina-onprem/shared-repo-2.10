@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+  labels:
+    codefresh.io/entity: internal-config
+    codefresh.io/internal: 'true'
+  name: kubernetes-admin-alina-mnr-1
+spec:
+  destination:
+    namespace: default
+    server: https://alina-mnr-1-vcluster.rnd-sandbox.cf-infra.com
+  project: cf-runtime-app-project
+  source:
+    directory:
+      include: >-
+        {all-runtimes-all-clusters/**/*.yaml,all-runtimes-all-clusters/*.yaml,runtimes/test-date/**/*.yaml,runtimes/test-date/*.yaml,test-date-managed-cluster-kubernetes-admin-alina-mnr-1-cm.yaml}
+      recurse: true
+    path: resources
+    repoURL: https://github.com/Alina-onprem/shared-repo-2.10.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      allowEmpty: true
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - allowEmpty=true
