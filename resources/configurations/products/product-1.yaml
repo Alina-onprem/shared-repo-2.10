@@ -11,7 +11,4 @@ spec:
       Chart.yaml:
         jsonPaths:
           - $.appVersion
-      templates/deployment.yaml:
-        jsonPaths:
-          - $.*.*.*.*.*.image
   concurrency: queue
