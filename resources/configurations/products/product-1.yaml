@@ -8,7 +8,7 @@ spec:
       file: Chart.yaml
       jsonPath: $.version
     promotion:
-      Chart.yaml:
+      templates/deployment.yaml:
         jsonPaths:
-          - $.appVersion
+          - $.*.*.*.*.*.image
   concurrency: queue
