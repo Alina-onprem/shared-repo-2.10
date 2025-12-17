@@ -3,4 +3,15 @@ kind: Product
 metadata:
   name: product-1
 spec:
+  promotionTemplate:
+    versionSource:
+      file: Chart.yaml
+      jsonPath: $.version
+    promotion:
+      Chart.yaml:
+        jsonPaths:
+          - $.appVersion
+      templates/deployment.yaml:
+        jsonPaths:
+          - $.*.*.*.*.*.image
   concurrency: terminate
