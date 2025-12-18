@@ -3,18 +3,18 @@ kind: Application
 metadata:
   name: test-gs
   labels:
-    codefresh.io/entity: 'git-source'
+    codefresh.io/entity: git-source
     codefresh.io/internal: 'false'
 spec:
   project: cf-git-sources
   sources:
-    - repoURL: https://github.com/Alina-onprem/promotion-flow-apps-examples.git
-      path: .
-      targetRevision: main
-      directory:
-        include: '*'
-        exclude: ''
-        recurse: true
+  - repoURL: https://github.com/Alina-onprem/promotion-flow-apps-examples.git
+    path: ''
+    targetRevision: test-210
+    directory:
+      include: '*'
+      exclude: ''
+      recurse: true
   destination:
     namespace: test-date
     server: https://kubernetes.default.svc
