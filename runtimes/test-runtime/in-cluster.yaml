@@ -15,7 +15,7 @@ spec:
   source:
     directory:
       include: >-
-        {all-runtimes-all-clusters/**/*.yaml,all-runtimes-all-clusters/*.yaml,control-planes/**/*.yaml,control-planes/*.yaml,runtimes/test-runtime/**/*.yaml,runtimes/test-runtime/*.yaml,test-runtime/default-git-source.yaml}
+        {all-runtimes-all-clusters/**/*.yaml,all-runtimes-all-clusters/*.yaml,control-planes/**/*.yaml,control-planes/*.yaml,runtimes/test-runtime/**/*.yaml,runtimes/test-runtime/*.yaml,test-runtime/cf-gitops-runtime.yaml,test-runtime/default-git-source.yaml}
       recurse: true
     path: resources
     repoURL: https://github.com/Alina-onprem/shared-repo-2.10.git
